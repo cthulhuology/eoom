@@ -10,7 +10,10 @@ all: $(BEAMS)
 	erlc $<
 
 
-.PHONY: clean
+.PHONY: clean console
 clean:
 	rm *.beam
+
+console: $(BEAMS)
+	erl -s toolbar 
 
